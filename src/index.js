@@ -3,8 +3,6 @@
 class EasyRtcAdapter {
 
   constructor(easyrtc) {
-    super();
-
     this.easyrtc = easyrtc || window.easyrtc;
     this.app = "default";
     this.room = "default";
