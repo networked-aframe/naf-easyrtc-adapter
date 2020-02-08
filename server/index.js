@@ -15,6 +15,8 @@ var port = process.env.PORT || 8080;
 var app = express();
 app.use(serveStatic('examples', {'index': ['index.html']}));
 
+app.use("/dist", serveStatic('dist'));
+
 // Start Express http server
 var webServer = http.createServer(app);
 
