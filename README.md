@@ -12,8 +12,9 @@ Not much, in the demo you'll find:
 
 - this is the current basic-audio demo from the networked-aframe main master repo demos from 0.7.1,
 - with aframe bumped up from 1.0.3 to 1.0.4,
-- with open-easyrtc added as per the pull request on the easyrtc adapter,
+- with open-easyrtc added as per the pull request on the NAF easyrtc adapter repo,
 - with the socket.io source from the same pull request included,
+- and with the package.json updated to include the relevent repos
 - and with the adapter switched to 'easyrtc'
 
 ## See an example on glitch
