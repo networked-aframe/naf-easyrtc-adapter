@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "easyrtc": "1.1.0"
+    "open-easyrtc": "^2.0.5",
+    "socket.io": "^2.3.0"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./server/index.js",
