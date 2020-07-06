@@ -1,9 +1,14 @@
+//
+// // this is the server out of the networked-aframe/easyrtc-adapter repo, modified with the pull request changes to open-easyrtc here: 
+// https://github.com/networked-aframe/naf-easyrtc-adapter/pull/2
+//
 // Load required modules
 var http    = require("http");              // http server core module
 var express = require("express");           // web framework external module
 var serveStatic = require('serve-static');  // serve static files
 var socketIo = require("socket.io");        // web socket external module
-var easyrtc = require("open-easyrtc");               // EasyRTC external module
+var easyrtc = require("open-easyrtc");      // NEW OPEN EasyRTC external module
+
 
 // Set process name
 process.title = "node-easyrtc";
