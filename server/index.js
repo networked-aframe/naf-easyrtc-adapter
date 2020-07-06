@@ -19,6 +19,7 @@ var port = process.env.PORT || 8080;
 var app = express();
 app.use(serveStatic('examples', {'index': ['index.html']}));
 
+app.use("/dist", serveStatic('dist'));
 // app.use(express.static('public')); // <-- line used when putting this file in glitch.com
 
 // Start Express http server
