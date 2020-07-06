@@ -42,22 +42,29 @@ You can deploy the included websocket server to Heroku using the button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Then include and configure `naf-easyrtc-adapter`.
+Then include and configure `naf-easyrtc-adapter` and dependecies.
 
 ```html
 <html>
+
 <head>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://unpkg.com/networked-aframe/dist/networked-aframe.min.js"></script>
-  <!-- Include naf-easyrtc-adapter *after* networked-aframe -->
-  <script src="https://unpkg.com/naf-easyrtc-adapter/dist/naf-easyrtc-adapter.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"></script>
+  <script src="https://unpkg.com/open-easyrtc@^2.0.5/api/easyrtc.js"></script>
+
+  <script src="https://unpkg.com/networked-aframe@0.7.1/dist/networked-aframe.js"></script>  
+  <script src="/dist/naf-easyrtc-adapter.js"></script>
+<!-- for some reason, using this source causes a failure, and I can't currently think of why that is: -->
+<!--   <script src="https://unpkg.com/naf-easyrtc-adapter/dist/naf-easyrtc-adapter.min.js"></script>  -->
 </head>
+
 <body>
-    <!-- Set adapter to easyrtc and serverURL to the url of your Heroku server. -->
-   <a-scene networked-scene="
-        adapter: easyrtc;
-        serverURL: ws://localhost:8080;
-    ">
+  <a-scene networked-scene="
+    room: basic;
+    debug: true;
+    audio: true;
+    adapter: easyrtc;
+  ">
   </a-scene>
 </body>
 </html>
