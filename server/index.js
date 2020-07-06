@@ -1,9 +1,13 @@
+//
+// // this is the server out of the networked-aframe/easyrtc-adapter repo, modified with the pull request changes to open-easyrtc here: 
+// https://github.com/networked-aframe/naf-easyrtc-adapter/pull/2
+//
 // Load required modules
 var http    = require("http");              // http server core module
 var express = require("express");           // web framework external module
 var serveStatic = require('serve-static');  // serve static files
 var socketIo = require("socket.io");        // web socket external module
-var easyrtc = require("easyrtc");               // EasyRTC external module
+var easyrtc = require("open-easyrtc");               // NEW OPEN EasyRTC external module
 
 // Set process name
 process.title = "node-easyrtc";
@@ -14,6 +18,8 @@ var port = process.env.PORT || 8080;
 // Setup and configure Express http server. Expect a subfolder called "examples" to be the web root.
 var app = express();
 app.use(serveStatic('examples', {'index': ['index.html']}));
+
+// app.use(express.static('public')); // <-- line used when putting this file in glitch.com
 
 // Start Express http server
 var webServer = http.createServer(app);
