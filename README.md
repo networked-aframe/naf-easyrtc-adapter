@@ -38,11 +38,9 @@ With the server running, browse the example at http://localhost:8080. Open anoth
 
 ### Running your own server
 
-You can deploy the included websocket server to Heroku using the button below.
+Just deploy to heroku. It pretty much works out-of-the-box.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Then include and configure `naf-easyrtc-adapter` and dependecies.
+Include and configure `naf-easyrtc-adapter` and dependecies.
 
 ```html
 <html>
