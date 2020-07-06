@@ -7,7 +7,8 @@ var http    = require("http");              // http server core module
 var express = require("express");           // web framework external module
 var serveStatic = require('serve-static');  // serve static files
 var socketIo = require("socket.io");        // web socket external module
-var easyrtc = require("open-easyrtc");               // NEW OPEN EasyRTC external module
+var easyrtc = require("open-easyrtc");      // NEW OPEN EasyRTC external module
+
 
 // Set process name
 process.title = "node-easyrtc";
@@ -20,7 +21,6 @@ var app = express();
 app.use(serveStatic('examples', {'index': ['index.html']}));
 
 app.use("/dist", serveStatic('dist'));
-// app.use(express.static('public')); // <-- line used when putting this file in glitch.com
 
 // Start Express http server
 var webServer = http.createServer(app);
